@@ -12,10 +12,10 @@ redirect_from:
 Education
 =========
 * **Ph.D in Deep RL for Robotics, Technical University of Munich, since 2023 (expected 2027)**
-  * 
-* **M.Sc. in EECS, Technical University of Munich, 2022**
+  * Supervised by Prof. Angela Schoellig
+* **M.Sc. in EECS, Technical University of Munich, 2020-2022**
   * Study Abroad: KTH Royal Institute of Technology, Stockholm, Fall 2020
-* **B.Sc. in EECS, Technical University of Munich, 2019**
+* **B.Sc. in EECS, Technical University of Munich, 2016-2019**
 
 Work experience
 ======
