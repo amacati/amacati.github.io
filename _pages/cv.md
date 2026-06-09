@@ -22,6 +22,10 @@ Work experience
 * **PhD student at TUM, since 2023**
   * Supervisor: Prof. Angela Schoellig
 
+* **Robotics and AI Institute (RAII Zurich), 2025-2026**
+  * PhD research internship for 6 months
+  * Loco-manipulation with sampling-based MPC and deep RL
+
 * **Huawei Research, Spring 2023**
   * Deep RL for neural motion planning
   * Imitation learning for insertion tasks
