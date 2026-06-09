@@ -1,0 +1,260 @@
+/* ==========================================================================
+   DARK MODE
+   --------------------------------------------------------------------------
+   Activated by `data-theme="dark"` on the <html> element (set before paint by
+   the inline script in _includes/head.html, toggled via the masthead button).
+   Self-contained palette so the rest of the (compiled) theme is left untouched.
+   ========================================================================== */
+
+/* Dark palette */
+$d-bg          : #1b1f24; // page background
+$d-surface     : #22272e; // masthead, footer, code, table header, dropdowns
+$d-surface-alt : #2d333b; // hover / table striping
+$d-text        : #c9d1d9;
+$d-heading     : #e6edf3;
+$d-muted       : #8b949e;
+$d-border      : #30363d;
+$d-link        : #6cb6ff;
+$d-link-hover  : #a7d3ff;
+
+/* --------------------------------------------------------------------------
+   Theme toggle button (visible in both themes, lives in the masthead)
+   -------------------------------------------------------------------------- */
+.theme-toggle {
+  position: absolute;
+  top: 0;
+  right: 1em;
+  height: 70px; // matches $masthead-height
+  display: flex;
+  align-items: center;
+  padding: 0 0.45em;
+  border: 0;
+  background: transparent;
+  color: #494e52;
+  font-size: 1.15em;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 30;
+  transition: color 0.2s ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: #000;
+    outline: none;
+  }
+}
+
+/* Keep the priority-plus hamburger clear of the toggle on narrow screens */
+.greedy-nav > button {
+  right: 3.2em;
+}
+
+/* --------------------------------------------------------------------------
+   Dark overrides
+   -------------------------------------------------------------------------- */
+html[data-theme="dark"] {
+  background-color: $d-bg;
+  color: $d-text;
+
+  body {
+    background-color: $d-bg;
+    color: $d-text;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $d-heading;
+  }
+
+  a {
+    color: $d-link;
+
+    &:hover {
+      color: $d-link-hover;
+    }
+  }
+
+  /* Theme toggle */
+  .theme-toggle {
+    color: $d-muted;
+
+    &:hover,
+    &:focus {
+      color: $d-heading;
+    }
+  }
+
+  /* Masthead + navigation */
+  .masthead {
+    background: $d-surface;
+    border-bottom-color: $d-border;
+  }
+
+  .greedy-nav {
+    background: $d-surface;
+
+    a {
+      color: $d-text;
+
+      &:hover {
+        color: $d-link-hover;
+      }
+    }
+
+    .hidden-links {
+      background: $d-surface;
+      border-color: $d-border;
+      box-shadow: 0 0 10px rgba(#000, 0.5);
+
+      a {
+        color: $d-text;
+
+        &:hover {
+          color: $d-link-hover;
+        }
+      }
+
+      &:before {
+        border-color: $d-border transparent;
+      }
+
+      &:after {
+        border-color: $d-surface transparent;
+      }
+    }
+  }
+
+  /* Author sidebar dropdown (mobile) */
+  .author__urls {
+    background: $d-surface;
+    border-color: $d-border;
+    box-shadow: 0 0 10px rgba(#000, 0.5);
+
+    &:before {
+      border-color: $d-border transparent;
+    }
+
+    &:after {
+      border-color: $d-surface transparent;
+    }
+
+    a {
+      color: $d-text;
+
+      &:hover {
+        color: $d-link-hover;
+      }
+    }
+  }
+
+  .author__bio,
+  .author__name,
+  .sidebar {
+    color: $d-text;
+  }
+
+  /* Page content */
+  blockquote {
+    border-left-color: $d-border;
+    color: $d-muted;
+  }
+
+  hr {
+    border-top-color: $d-border;
+  }
+
+  /* Inline code */
+  p > code,
+  a > code,
+  li > code,
+  figcaption > code,
+  td > code {
+    background: $d-surface;
+    border-color: $d-border;
+    color: $d-heading;
+  }
+
+  /* Code blocks */
+  div.highlighter-rouge,
+  figure.highlight,
+  .highlight,
+  pre.highlight,
+  pre {
+    background-color: #1d2127;
+    border-color: $d-border;
+    color: $d-text;
+  }
+
+  /* Tables */
+  table {
+    border-color: $d-border;
+  }
+
+  thead {
+    background-color: $d-surface;
+    border-bottom-color: $d-border;
+  }
+
+  th,
+  td {
+    border-color: $d-border;
+  }
+
+  tr:nth-child(even) {
+    background-color: $d-surface-alt;
+  }
+
+  /* Footer */
+  .page__footer {
+    background-color: $d-surface;
+    border-top-color: $d-border;
+    color: $d-muted;
+
+    a {
+      color: $d-muted;
+
+      &:hover {
+        color: $d-link-hover;
+      }
+    }
+
+    .fas, .fab, .far, .fal {
+      color: $d-muted;
+    }
+  }
+
+  /* Archive lists (publications, talks, etc.) */
+  .archive__item-title a {
+    color: $d-link;
+  }
+
+  .archive__subtitle,
+  .page__meta,
+  .archive__item-excerpt {
+    color: $d-muted;
+    border-bottom-color: $d-border;
+  }
+
+  .archive__item-teaser {
+    border-color: $d-border;
+  }
+
+  /* Separators that use the border colour */
+  .page__content + .pagination,
+  .page__meta + .pagination,
+  .pagination,
+  .page__hero-caption {
+    border-color: $d-border;
+  }
+
+  /* Form fields */
+  input, textarea, select {
+    background-color: $d-surface;
+    border-color: $d-border;
+    color: $d-text;
+  }
+
+  /* Images: gently dim so they don't glare against the dark page */
+  img {
+    filter: brightness(0.92);
+  }
+}
