@@ -8,6 +8,7 @@ author_profile: true
 ## Conference and Journal Papers
 **M. Schuck**, S. Samy, A. P. Schoellig "A Primer on SO(3) Action Representations in Deep Reinforcement Learning," in The Fourteenth International Conference on Learning Representations (ICLR), 2026. [[paper](https://arxiv.org/abs/2510.11103)]
 
+D. San José Pro, O. Hausdörfer, R. Römer, M. Dösch, **M. Schuck**, A. P. Schoellig "CRISP - Compliant ROS2 Controllers for Learning-Based Manipulation Policies and Teleoperation," in IEEE Robotics and Automation Practice (RA-P), 2026. [[paper](https://arxiv.org/abs/2509.06819)]
 
 **M. Schuck**, D. O. Dahanaggamaarachchi, B. Sprenger, V. Vyas, S. Zhou and A. P. Schoellig, "SwarmGPT: Combining Large Language Models With Safe Motion Planning for Drone Swarm Choreography," in IEEE Robotics and Automation Letters, vol. 10, no. 11, pp. 12237-12244, 2025. [[paper](https://ieeexplore.ieee.org/abstract/document/11197931)]
 
